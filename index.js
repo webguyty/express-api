@@ -4,7 +4,7 @@ const app = express()
 // Init Middlware
 app.use(express.json({ extended: false }));
 
-app.use('/', require('./routes/test'));
+app.use('/', require('./routes/home'));
 
 const PORT = process.env.PORT || 5000;
 
