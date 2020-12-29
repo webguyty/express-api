@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', async (req, res) => {
-  res.send('hello world')
+  res.send('<h1>hello world<h1>')
   // try {
   //   res.send('This / get is working')
   // } catch (err) {
