@@ -12,6 +12,11 @@ app.use('/', require('./routes/home'));
 
 app.get('/test', (req, res) => res.send('test route successful'))
 
+// Define routes for Contact Keeper app - contactKeeper
+app.use('/contactKeeper/users', require('./routes/contactKeeper/users'));
+app.use('/contactKeeper/auth', require('./routes/contactKeeper/auth'));
+app.use('/contactKeeper/contacts', require('./routes/contactKeeper/contacts'));
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`We got action - Server started on port ${PORT} - An ACTION1`));
