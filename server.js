@@ -10,6 +10,8 @@ app.use(express.json({ extended: false }));
 
 app.use('/', require('./routes/home'));
 
+app.get('/test', (req, res) => res.send('you got it'))
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`We got action - Server started on port ${PORT} - An ACTION1`));
