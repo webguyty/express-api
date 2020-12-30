@@ -10,7 +10,7 @@ app.use(express.json({ extended: false }));
 
 app.use('/', require('./routes/home'));
 
-app.get('/test', (req, res) => res.send('you got it'))
+app.get('/test', (req, res) => res.send('test route successful'))
 
 const PORT = process.env.PORT || 5000;
 
