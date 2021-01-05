@@ -12,7 +12,8 @@ module.exports = function (req, res, next) {
   }
 
   try {
-    const decoded = jwt.verify(token, config.get('jwtSecretCK'));
+    const jwtSecret = process.env.JWTSECRETCK || config.get('jwtSecretCK')
+    const decoded = jwt.verify(token, jwtSecret);
     req.user = decoded.user;
     next();
   } catch (error) {
