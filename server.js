@@ -24,6 +24,11 @@ app.use('/contactKeeper/contacts', require('./routes/contactKeeper/contacts'));
 app.use('/itLogger/logs', require('./routes/itLogger/logs'));
 app.use('/itLogger/techs', require('./routes/itLogger/techs'));
 
+// Define routes for Goal Seeker app - goalSeeker
+app.use('/goalSeeker/users', require('./routes/goalSeeker/users'));
+app.use('/goalSeeker/auth', require('./routes/goalSeeker/auth'));
+app.use('/goalSeeker/dailyGoals', require('./routes/goalSeeker/dailyGoals'));
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`We got action - Server started on port ${PORT} - An ACTION1`));
