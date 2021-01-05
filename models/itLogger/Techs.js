@@ -11,4 +11,4 @@ const TechsSchema = mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('techs', TechsSchema);
+module.exports = mongoose.model('it-logger-techs', TechsSchema);

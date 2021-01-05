@@ -19,4 +19,4 @@ const LogsSchema = mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('logs', LogsSchema);
+module.exports = mongoose.model('it-logger-logs', LogsSchema);
