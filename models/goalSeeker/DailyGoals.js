@@ -19,4 +19,4 @@ const DailyGoalsSchema = mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('dailyGoals', DailyGoalsSchema);
+module.exports = mongoose.model('goal-seeker-dailyGoals', DailyGoalsSchema);
