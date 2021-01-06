@@ -3,10 +3,10 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const config = require('config');
-const auth = require('../../authmiddleware/auth');
+const auth = require('../../middleware/auth');
 const { check, validationResult } = require('express-validator');
 
-const User = require('../models/User');
+const User = require('../../models/goalSeeker/User');
 
 // @route     GET api/auth
 // @desc      Get logged in user
@@ -57,9 +57,11 @@ router.post(
         },
       };
 
+      const jwtSecret = process.env.JWT_SECRET_CK || config.get('jwtSecretCK');
+
       jwt.sign(
         payload,
-        config.get('jwtSecret'),
+        jwtSecret,
         {
           expiresIn: 360000,
         },

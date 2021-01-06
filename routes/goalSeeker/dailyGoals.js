@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const auth = require('../middleware/auth');
+const auth = require('../../middleware/auth');
 
-const DailyGoals = require('../models/DailyGoals');
+const DailyGoals = require('../../models/goalSeeker/DailyGoals');
 
 // @route		GET api/dailyGoals
 // @desc		Creates a daily goal list
