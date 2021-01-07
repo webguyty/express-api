@@ -57,7 +57,7 @@ router.post(
         },
       };
 
-      const jwtSecret = process.env.JWT_SECRET_CK || config.get('jwtSecretCK');
+      const jwtSecret = process.env.JWTSECRETCK || config.get('jwtSecretCK')
 
       jwt.sign(
         payload,
@@ -72,7 +72,7 @@ router.post(
       );
     } catch (error) {
       console.error(error);
-      res.status(503).send('Server error');
+      res.status(500).send('Server error');
     }
   }
 );

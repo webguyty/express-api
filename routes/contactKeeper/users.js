@@ -50,7 +50,7 @@ router.post(
         },
       };
 
-      const jwtSecret = process.env.JWT_SECRET_CK || config.get('jwtSecretCK');
+      const jwtSecret = process.env.JWTSECRETCK || config.get('jwtSecretCK')
 
       jwt.sign(
         payload,
