@@ -11,10 +11,6 @@ connectDB()
 app.use(express.json({ extended: false }));
 app.use(cors())
 
-app.use('/', require('./routes/home'));
-
-app.get('/test', (req, res) => res.send('test route successful'))
-
 // Define routes for Contact Keeper app - contactKeeper
 app.use('/contactKeeper/users', require('./routes/contactKeeper/users'));
 app.use('/contactKeeper/auth', require('./routes/contactKeeper/auth'));
